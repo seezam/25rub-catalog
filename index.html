@@ -136,23 +136,12 @@
             transform: translateY(-1px);
         }
 
-        .search-box {
-            margin-bottom: 20px;
-        }
-
-        .search-box input {
-            width: 100%;
-            padding: 12px 16px;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            font-size: 15px;
-            box-sizing: border-box;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-
-        .search-box input:focus {
-            border-color: var(--primary-color);
+        .registry-title {
+            margin: 0 0 12px;
+            color: var(--text-color);
+            font-size: 18px;
+            font-weight: 800;
+            text-transform: uppercase;
         }
 
         .table-container {
@@ -274,12 +263,10 @@
             </div>
         </header>
 
-        <div class="search-box">
-            <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Поиск по номеру (например: 6184750)...">
-        </div>
+        <h2 class="registry-title">Полный реестр по номерам</h2>
 
         <div class="table-container">
-            <table id="banknotesTable">
+            <table>
                 <thead>
                     <tr>
                         <th style="width: 10%;">№</th>
@@ -340,26 +327,5 @@
         </div>
     </div>
 
-    <script>
-        function filterTable() {
-            var input, filter, table, tr, td, i, txtValue;
-            input = document.getElementById("searchInput");
-            filter = input.value.toUpperCase();
-            table = document.getElementById("banknotesTable");
-            tr = table.getElementsByTagName("tr");
-
-            for (i = 1; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[1];
-                if (td) {
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                }
-            }
-        }
-    </script>
 </body>
 </html>
