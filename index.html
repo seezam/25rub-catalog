@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог коллекции: 25 Рублей СССР 1961 (Серия ле)</title>
+    <style>
+        :root {
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --primary-color: #8b0000;
+            --accent-color: #1b5e20;
+            --accent-bg: #e8f5e9;
+            --text-color: #2c3e50;
+            --border-color: #e2e8f0;
+            --link-bg: #2563eb;
+            --link-hover: #1d4ed8;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px 10px;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            border-top: 5px solid var(--primary-color);
+        }
+
+        h1 {
+            margin: 0 0 8px 0;
+            color: var(--primary-color);
+            font-size: 24px;
+        }
+
+        .subtitle {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: #f8fafc;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #64748b;
+            margin-top: 2px;
+        }
+
+        /* Галерея ссылок Google Фото */
+        .photo-gallery-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 10px;
+            padding: 18px;
+            margin-top: 15px;
+        }
+
+        .photo-gallery-title {
+            font-weight: 700;
+            color: #1e40af;
+            font-size: 15px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .photo-buttons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .btn-photo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: var(--link-bg);
+            color: white;
+            text-decoration: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: background-color 0.2s, transform 0.1s;
+            box-shadow: 0 2px 5px rgba(37, 99, 235, 0.2);
+        }
+
+        .btn-photo:hover {
+            background-color: var(--link-hover);
+            transform: translateY(-1px);
+        }
+
+        .search-box {
+            margin-bottom: 20px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 15px;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary-color);
+        }
+
+        .table-container {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #f8fafc;
+            font-weight: 600;
+            color: #475569;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background-color: #f1f5f9;
+        }
+
+        .tag-seq {
+            background-color: var(--accent-bg);
+            color: var(--accent-color);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .number-cell {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 16px;
+            font-weight: 700;
+            color: #1e293b;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 600px) {
+            th, td {
+                padding: 10px 12px;
+            }
+            .number-cell {
+                font-size: 14px;
+            }
+            .photo-buttons-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Коллекционный набор: 25 Рублей СССР 1961 года</h1>
+            <div class="subtitle">Состояние: Press / UNC (Идеальное банковское состояние, купюры из пачки)</div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">39 шт.</div>
+                    <div class="stat-label">Всего банкнот</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">ле</div>
+                    <div class="stat-label">Серия (поздний выпуск)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">18 шт.</div>
+                    <div class="stat-label">Макс. корешок подряд</div>
+                </div>
+            </div>
+
+            <!-- Блок с ссылками на фото -->
+            <div class="photo-gallery-box">
+                <div class="photo-gallery-title">
+                    📸 Галерея фотографий высокой четкости (Google Фото)
+                </div>
+                <div class="photo-buttons-grid">
+                    <a href="https://photos.app.goo.gl/tT6zFaEv7AantvZN9" target="_blank" class="btn-photo">
+                        🖼 Фотоальбом #1 (Комплект)
+                    </a>
+                    <a href="https://photos.app.goo.gl/1VKyPqbBqaNteY6F9" target="_blank" class="btn-photo">
+                        🖼 Фотоальбом #2 (Связки)
+                    </a>
+                    <a href="https://photos.app.goo.gl/59aZHuqro3rsmLgeA" target="_blank" class="btn-photo">
+                        🖼 Фотоальбом #3 (Детали)
+                    </a>
+                    <a href="https://photos.app.goo.gl/PjproqN5kR1GEesG8" target="_blank" class="btn-photo">
+                        🖼 Фотоальбом #4 (Номера)
+                    </a>
+                    <a href="https://photos.app.goo.gl/9grFJc3Nt1sSbrnu7" target="_blank" class="btn-photo">
+                        🖼 Фото 5 (Аверс / Ленин)
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Поиск по номеру (например: 6184750)...">
+        </div>
+
+        <div class="table-container">
+            <table id="banknotesTable">
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">№</th>
+                        <th style="width: 35%;">Серия и Номер</th>
+                        <th style="width: 35%;">Связка / Группа</th>
+                        <th style="width: 20%;">Состояние</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Сегмент 1 -->
+                    <tr><td>1</td><td class="number-cell">ле 6184734</td><td><span class="tag-seq">Связка 4 шт (734–737)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>2</td><td class="number-cell">ле 6184735</td><td><span class="tag-seq">Связка 4 шт (734–737)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>3</td><td class="number-cell">ле 6184736</td><td><span class="tag-seq">Связка 4 шт (734–737)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>4</td><td class="number-cell">ле 6184737</td><td><span class="tag-seq">Связка 4 шт (734–737)</span></td><td>UNC / Press</td></tr>
+                    
+                    <!-- Сегмент 2 -->
+                    <tr><td>5</td><td class="number-cell">ле 6184743</td><td><span class="tag-seq">Связка 11 шт (743–753)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>6</td><td class="number-cell">ле 6184744</td><td><span class="tag-seq">Связка 11 шт (743–753)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>7</td><td class="number-cell">ле 6184745</td><td><span class="tag-seq">Связка 11 шт (743–753)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>8</td><td class="number-cell">ле 6184746</td><td><span class="tag-seq">Связка 11 шт (743–753)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>9</td><td class="number-cell">ле 6184747</td><td><span class="tag-seq">Связка 11 шт (743–753)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>10</td><td class="number-cell">ле 6184748</td><td><span class="tag-seq">Связка 11 шт (743–753)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>11</td><td class="number-cell">ле 6184749</td><td><span class="tag-seq">Связка 11 шт (743–753)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>12</td><td class="number-cell">ле 6184750</td><td><span class="tag-seq">Связка 11 шт (743–753)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>13</td><td class="number-cell">ле 6184751</td><td><span class="tag-seq">Связка 11 шт (743–753)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>14</td><td class="number-cell">ле 6184752</td><td><span class="tag-seq">Связка 11 шт (743–753)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>15</td><td class="number-cell">ле 6184753</td><td><span class="tag-seq">Связка 11 шт (743–753)</span></td><td>UNC / Press</td></tr>
+
+                    <!-- Сегмент 3 -->
+                    <tr><td>16</td><td class="number-cell">ле 6184755</td><td><span class="tag-seq">Связка 8 шт (755–762)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>17</td><td class="number-cell">ле 6184756</td><td><span class="tag-seq">Связка 8 шт (755–762)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>18</td><td class="number-cell">ле 6184757</td><td><span class="tag-seq">Связка 8 шт (755–762)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>19</td><td class="number-cell">ле 6184758</td><td><span class="tag-seq">Связка 8 шт (755–762)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>20</td><td class="number-cell">ле 6184759</td><td><span class="tag-seq">Связка 8 шт (755–762)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>21</td><td class="number-cell">ле 6184760</td><td><span class="tag-seq">Связка 8 шт (755–762)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>22</td><td class="number-cell">ле 6184761</td><td><span class="tag-seq">Связка 8 шт (755–762)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>23</td><td class="number-cell">ле 6184762</td><td><span class="tag-seq">Связка 8 шт (755–762)</span></td><td>UNC / Press</td></tr>
+
+                    <!-- Сегмент 4 (Блок 18 шт) -->
+                    <tr><td>24</td><td class="number-cell">ле 6184773</td><td><span class="tag-seq">Корешок 18 шт (773–790)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>25</td><td class="number-cell">ле 6184774</td><td><span class="tag-seq">Корешок 18 шт (773–790)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>26</td><td class="number-cell">ле 6184775</td><td><span class="tag-seq">Корешок 18 шт (773–790)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>27</td><td class="number-cell">ле 6184776</td><td><span class="tag-seq">Корешок 18 шт (773–790)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>28</td><td class="number-cell">ле 6184777</td><td><span class="tag-seq">Корешок 18 шт (773–790)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>29</td><td class="number-cell">ле 6184778</td><td><span class="tag-seq">Корешок 18 шт (773–790)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>30</td><td class="number-cell">ле 6184779</td><td><span class="tag-seq">Корешок 18 шт (773–790)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>31</td><td class="number-cell">ле 6184780</td><td><span class="tag-seq">Корешок 18 шт (773–790)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>32</td><td class="number-cell">ле 6184783</td><td><span class="tag-seq">Корешок 18 шт (773–790)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>33</td><td class="number-cell">ле 6184784</td><td><span class="tag-seq">Корешок 18 шт (773–790)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>34</td><td class="number-cell">ле 6184785</td><td><span class="tag-seq">Корешок 18 шт (773–790)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>35</td><td class="number-cell">ле 6184786</td><td><span class="tag-seq">Корешок 18 шт (773–790)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>36</td><td class="number-cell">ле 6184787</td><td><span class="tag-seq">Корешок 18 шт (773–790)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>37</td><td class="number-cell">ле 6184788</td><td><span class="tag-seq">Корешок 18 шт (773–790)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>38</td><td class="number-cell">ле 6184789</td><td><span class="tag-seq">Корешок 18 шт (773–790)</span></td><td>UNC / Press</td></tr>
+                    <tr><td>39</td><td class="number-cell">ле 6184790</td><td><span class="tag-seq">Корешок 18 шт (773–790)</span></td><td>UNC / Press</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function filterTable() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("banknotesTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 1; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
