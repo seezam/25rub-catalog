@@ -46,48 +46,73 @@
             font-size: 24px;
         }
 
-        .subtitle {
-            color: #64748b;
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-
-        .header-photo {
-            display: block;
-            max-width: 100%;
-            max-height: 320px;
-            width: auto;
-            height: auto;
-            margin: 0 auto 20px;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.12);
-        }
-
-        .stats-grid {
+        .photo-preview-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 12px;
-            margin-bottom: 20px;
+            margin: 0 0 20px;
         }
 
-        .stat-card {
-            background: #f8fafc;
-            padding: 12px 15px;
-            border-radius: 8px;
+        .photo-preview {
+            overflow: hidden;
             border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: #f8fafc;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .photo-preview img {
+            display: block;
+            width: 100%;
+            height: 220px;
+            object-fit: contain;
+        }
+
+        .photo-preview-caption {
+            display: block;
+            padding: 8px 12px;
+            border-top: 1px solid var(--border-color);
+            font-size: 13px;
+            font-weight: 600;
             text-align: center;
         }
 
-        .stat-value {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--primary-color);
+        .set-details {
+            margin-bottom: 20px;
+            padding: 16px 18px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            background: #f8fafc;
         }
 
-        .stat-label {
-            font-size: 12px;
-            color: #64748b;
-            margin-top: 2px;
+        .set-details h2 {
+            margin: 0 0 8px;
+            font-size: 17px;
+        }
+
+        .set-condition {
+            margin: 0 0 12px;
+        }
+
+        .set-facts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+            margin-bottom: 12px;
+        }
+
+        .sequence-intro {
+            margin: 0 0 6px;
+        }
+
+        .sequence-list {
+            margin: 0;
+            padding-left: 22px;
+        }
+
+        .sequence-list li + li {
+            margin-top: 4px;
         }
 
         /* Галерея ссылок Google Фото */
@@ -209,33 +234,52 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        @media (max-width: 480px) {
+            .photo-preview-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>Коллекционный набор: 25 Рублей СССР 1961 года</h1>
-            <div class="subtitle">Состояние: Press / UNC (Идеальное банковское состояние, купюры из пачки)</div>
+            <section class="set-details" aria-labelledby="set-details-title">
+                <h2 id="set-details-title">Особенности и состав набора</h2>
+                <p class="set-condition">
+                    Все банкноты в <strong>идеальном банковском состоянии (UNC / Press)</strong> — из одной родной пачки, без обращения; уголки острые, прессовые, бумага сочная, хрустящая.
+                </p>
+                <div class="set-facts">
+                    <span><strong>Количество:</strong> 39 шт.</span>
+                    <span><strong>Состояние:</strong> UNC / Press (пресс)</span>
+                    <span><strong>Серия:</strong> <code>ле</code></span>
+                </div>
+                <p class="sequence-intro"><strong>Высокая связность номеров:</strong> банкноты идут подряд практически целыми блоками:</p>
+                <ul class="sequence-list">
+                    <li><strong>Главная ценность — корешок 18 шт. подряд:</strong> <code>ле 6184773 — ле 6184790</code></li>
+                    <li><strong>Связка 11 шт. подряд:</strong> <code>ле 6184743 — ле 6184753</code></li>
+                    <li><strong>Связка 8 шт. подряд:</strong> <code>ле 6184755 — ле 6184762</code></li>
+                    <li><strong>Связка 4 шт. подряд:</strong> <code>ле 6184734 — ле 6184737</code></li>
+                </ul>
+            </section>
 
-            <img
-                class="header-photo"
-                src="https://lh3.googleusercontent.com/pw/AP1GczPGvQ9rmm4hIx9iAbB2XRk_RkThvxalKZObkcAiL3CEkGlPl1udqWIZ6lrjTUG0xyaFlab_Wb7_84pdgZ39oe--dmaimTCHSJqutYS6ST7aLS5KiOi4=w1200-h1600"
-                alt="Аверс банкноты 25 рублей СССР 1961 года с портретом Ленина"
-            >
-
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-value">39 шт.</div>
-                    <div class="stat-label">Всего банкнот</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value">ле</div>
-                    <div class="stat-label">Серия (поздний выпуск)</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value">18 шт.</div>
-                    <div class="stat-label">Макс. корешок подряд</div>
-                </div>
+            <div class="photo-preview-grid">
+                <a class="photo-preview" href="https://photos.app.goo.gl/9grFJc3Nt1sSbrnu7" target="_blank" rel="noopener noreferrer">
+                    <img
+                        src="https://lh3.googleusercontent.com/pw/AP1GczPGvQ9rmm4hIx9iAbB2XRk_RkThvxalKZObkcAiL3CEkGlPl1udqWIZ6lrjTUG0xyaFlab_Wb7_84pdgZ39oe--dmaimTCHSJqutYS6ST7aLS5KiOi4=w1200-h1600"
+                        alt="Аверс банкноты 25 рублей СССР 1961 года с портретом Ленина"
+                    >
+                    <span class="photo-preview-caption">Аверс — Ленин</span>
+                </a>
+                <a class="photo-preview" href="https://photos.app.goo.gl/tT6zFaEv7AantvZN9" target="_blank" rel="noopener noreferrer">
+                    <img
+                        src="https://lh3.googleusercontent.com/pw/AP1GczOf-pMa0nwgU_B-7pA_Ta7t6EGHSHK76nJ_HeZeiO3UP_ToiUnU1E2v0ueaMXUpE7WXypNcAkodQ1rdcHmbQaP6OsGMKOJRdIlWGn3Fy6S6rFhI6vVr=w600-h315-p-k"
+                        alt="Общий вид комплекта банкнот из фотоальбома"
+                    >
+                    <span class="photo-preview-caption">Комплект банкнот</span>
+                </a>
             </div>
 
             <!-- Блок с ссылками на фото -->
